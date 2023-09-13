@@ -122,7 +122,7 @@ const MovieDetails = () => {
               <div>
                 <p
                   data-testid="movie-overview"
-                  className=" w-[230px] text-center text-[#333]  text-md font-normal sm:w-[700px] sm:text-left  mt-2 "
+                  className=" w-[260px] text-center mr-8 text-[#333]  text-md font-normal sm:w-[700px] sm:text-left  mt-2 "
                 >
                   {movieDetails.overview}
                 </p>
