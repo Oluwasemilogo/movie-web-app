@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; 
+import axios from "axios";
 import { Navbar } from "./Navbar";
 import Play from "../Assets/Play.svg";
 import imob from "../Assets/imob.svg";
 import item from "../Assets/item.svg";
-
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   const [movie, setMovie] = useState(null);
@@ -42,7 +42,7 @@ export const HeroSection = () => {
 
   const backgroundImageStyle = {
     backgroundImage: `url(https://image.tmdb.org/t/p/original${
-      movie?.backdrop_path || "" 
+      movie?.backdrop_path || ""
     })`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -76,7 +76,7 @@ export const HeroSection = () => {
                       </p>
                     </div>
                   </div>
-                  <p className=" w-[250px] text-white text-md font-normal mt-4 md:w-[700px] ">
+                  <p className=" w-[250px] truncate text-white text-md font-normal mt-4 md:w-[700px] ">
                     {movie.overview}
                   </p>
                   <button className="px-4 py-2.5 mt-4 rounded-md w-[200px] bg-rose-700 text-white hover:bg-rose-800 focus:outline-none flex items-center gap-4">
@@ -86,16 +86,28 @@ export const HeroSection = () => {
                 </>
               )}
               {error && (
-                <h1 className="text-white text-lg font-bold mt-4 text-center">{error}</h1>
+                <h1 className="text-white text-lg font-bold mt-4 text-center">
+                  {error}
+                </h1>
               )}
             </div>
           </div>
           <div className="pr-2 text-white py-2 mt-20">
-            <p className="text-sm font-extralight text-white my-2">1</p>
-            <p className="text-sm font-extralight text-white my-2">2</p>
-            <p className="text-sm font-bold text-white my-2">3</p>
-            <p className="text-sm font-extralight text-white my-2">4</p>
-            <p className="text-sm font-extralight text-white my-2">5</p>
+            <Link to="/">
+              <p className="text-sm font-extralight text-white my-2 cursor-pointer">1</p>
+            </Link>
+            <Link to="/">
+              <p className="text-sm font-extralight text-white my-2 cursor-pointer">2</p>
+            </Link>
+            <Link to="/">
+              <p className="text-sm font-extralight text-white my-2 cursor-pointer">3</p>
+            </Link>
+          <Link to="/">
+              <p className="text-sm font-extralight text-white my-2 cursor-pointer">4</p>
+            </Link>
+            <Link to="/">
+              <p className="text-sm font-extralight text-white my-2 cursor-pointer">5</p>
+            </Link>
           </div>
         </div>
       </div>

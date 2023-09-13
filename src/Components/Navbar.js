@@ -1,8 +1,7 @@
 import React from "react";
 import logo from "../Assets/logo.svg";
 import menu from "../Assets/Menu.svg";
-import { SearchBox } from "./SearchBox";
-
+import { SearchBox }   from "./SearchBox";
 
 export const Navbar = () => {
   return (
@@ -11,10 +10,12 @@ export const Navbar = () => {
         <img src={logo} alt="logo" className="hidden md:block" />
         <h1 className="text-xl font-bold">MovieBox</h1>
       </div>
-      <SearchBox/>
+      <SearchBox />
       <div className="gap-1  flex items-center md:gap-6 ">
-        <p className=" hidden sm:block text-base md:text-xl font-medium">Sign in</p>
-        <img src={menu} alt="menu"  />
+        <p className="hidden sm:block text-base md:text-xl font-medium">
+          Sign in
+        </p>
+        <img src={menu} alt="menu" />
       </div>
     </div>
   );

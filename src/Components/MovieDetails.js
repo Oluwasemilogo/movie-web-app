@@ -43,8 +43,9 @@ const MovieDetails = () => {
   return (
     <div>
       {error && (
-        <h1 className="text-red-500 text-center flex justify-center items-center font-normal text-2xl">
-          {error}
+        <h1 className="text-red-500 flex justify-center items-center h-screen  font-normal text-2xl">
+        oops!  {error}
+        
         </h1>
       )}
       {movieDetails && !error && (
@@ -153,7 +154,11 @@ const MovieDetails = () => {
                   </a>
                 </div>
               </div>
-              <img src={otherImage} alt="otherImage" className="mt-8 w-[300px] sm:mt-0" />
+              <img
+                src={otherImage}
+                alt="otherImage"
+                className="mt-8 w-[300px] sm:mt-0"
+              />
             </div>
             {/* fgf */}
           </div>

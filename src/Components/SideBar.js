@@ -25,7 +25,7 @@ export const SideBar = () => {
                 <p className="hidden md:block">Home</p>
               </li>
             </Link>
-            <li className="flex gap-4 pl-12 py-4 bg-red-500 bg-opacity-10   border-r-4 border-[#BE123C]">
+            <li className=" flex gap-4 pl-10 py-4 bg-red-500 bg-opacity-10   border-r-4 border-[#BE123C]">
               <img src={movie} alt="" className="w-8" />
               <p className="hidden md:block">Movies</p>
             </li>
@@ -50,7 +50,7 @@ export const SideBar = () => {
             </li>
             <li className="flex gap-4 items-center  px-10 py-2 ">
               <img src={log} alt="" className="w-8" />
-              <p  >Log Out</p>
+              <p   >Log Out</p>
             </li>
           </ul>
         </div>

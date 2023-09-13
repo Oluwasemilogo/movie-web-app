@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import rightIcon from "../Assets/right.svg";
 import imob from "../Assets/imob.svg";
-import item from "../Assets/item.svg";
 import { Link } from "react-router-dom";
 import likeIcon from "../Assets/likeIcon.svg";
+
 
 export const Featured = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -78,12 +78,12 @@ export const Featured = () => {
           {error}
         </p>
       ) : (
-        <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 gap-4 my-4">
+        <div className="grid grid-cols-1 mx-auto sm:grid-cols-2  md:grid-cols-4 gap-4 my-4">
           {topMovies.map((movie) => (
             <Link to={`/movies/${movie.id}`} key={movie.id}>
               <div
                 data-testid="movie-card"
-                className="bg-white rounded-lg shadow-sm flex flex-col items-center my-8 pb-4 w-[270px] md:w-[300px] sm:mx-auto ml-6"
+                className="bg-white rounded-lg shadow-sm flex flex-col items-center my-8 pb-4 w-[270px] md:w-[300px] mx-auto ml-10"
               >
                 <div className="relative">
                   <img
@@ -119,16 +119,13 @@ export const Featured = () => {
                 >
                   Release Date: {movie.release_date}
                 </p>
-                <div className="flex justify-between items-center mt-2">
-                  <div className="flex items-center gap-2">
+                
+                  <div className="flex items-center gap-2 mt-2 ">
                     <img src={imob} alt="imob icon" />
                     <p>{movie.vote_average}/10</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <img src={item} alt="item icon" />
-                    <p>{movie.popularity}</p>
-                  </div>
-                </div>
+                  
+              
               </div>
             </Link>
           ))}
