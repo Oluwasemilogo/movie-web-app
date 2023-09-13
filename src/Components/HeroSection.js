@@ -54,12 +54,12 @@ export const HeroSection = () => {
     <div style={backgroundImageStyle} className="w-full h-full">
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
         <div className="flex justify-between items-center">
-          <div className="container pl-20 py-6">
+          <div className=" pl-3 container md:pl-20 py-6">
             <div className="flex flex-col h-full">
               <Navbar />
               {movie && (
                 <>
-                  <h1 className="text-5xl text-white font-bold mt-36 w-[400px]">
+                  <h1 className=" w-[200px] text-5xl text-white font-bold mt-36 md:w-[400px]">
                     {movie.title}
                   </h1>
                   <div className="flex items-center gap-6 mt-4">
@@ -76,7 +76,7 @@ export const HeroSection = () => {
                       </p>
                     </div>
                   </div>
-                  <p className="text-white text-md font-normal mt-4 w-[500px]">
+                  <p className=" w-[250px] text-white text-md font-normal mt-4 md:w-[700px] ">
                     {movie.overview}
                   </p>
                   <button className="px-4 py-2.5 mt-4 rounded-md w-[200px] bg-rose-700 text-white hover:bg-rose-800 focus:outline-none flex items-center gap-4">

@@ -10,34 +10,34 @@ import { Link } from "react-router-dom";
 export const SideBar = () => {
   return (
     <>
-      <div className="w-1/6 items-center  h-[100vh] rounded-r-[45px] border border-solid border-[rgba(0,0,0,0.30)]">
+      <div className="min-w-[40px] w-1/6 items-center  rounded-r-[45px] border border-solid border-[rgba(0,0,0,0.30)] overflow-y-auto">
         <div className="flex flex-col items-center">
           <ul className="mt-6 space-y-8 flex flex-col">
             <Link to="/">
-            <li className="flex gap-4 items-center py-2 px-10">
-              <img src={logo} alt="logo" className="" />
-              <p>MovieBox</p>
+              <li className="flex gap-4 items-center py-2 px-10">
+                <img src={logo} alt="logo" className="" />
+                <p className="hidden md:block">MovieBox</p>
               </li>
             </Link>
             <Link to="/">
-            <li className="flex gap-4 items-center px-10  py-2 ">
-              <img src={homeIcon} alt="" className="w-8" />
-              <p>Home</p>
+              <li className="flex gap-4 items-center px-10  py-2 ">
+                <img src={homeIcon} alt="" className="w-8" />
+                <p className="hidden md:block">Home</p>
               </li>
             </Link>
             <li className="flex gap-4 pl-12 py-4 bg-red-500 bg-opacity-10   border-r-4 border-[#BE123C]">
               <img src={movie} alt="" className="w-8" />
-              <p>Movies</p>
+              <p className="hidden md:block">Movies</p>
             </li>
             <li className="flex gap-4 items-center  py-2 px-10 ">
               <img src={tvSeries} alt="" className="w-8" />
-              <p>TV Series</p>
+              <p className="hidden md:block">TV Series</p>
             </li>
             <li className="flex gap-4 items-center  py-2 px-10 ">
               <img src={calendar} alt="" className="w-8" />
-              <p>Upcoming</p>
+              <p className="hidden md:block">Upcoming</p>
             </li>
-            <li className="flex flex-col gap-4 items-center  p-4 rounded-lg bg-red-500 bg-opacity-10 border border-solid border-[#BE123C] px-10">
+            <li className=" hidden md:flex flex-col gap-4 items-center  p-4 rounded-lg bg-red-500 bg-opacity-10 border border-solid border-[#BE123C] px-10">
               <p className="text-sm font-semibold text-gray-800 text-opacity-80">
                 Play movie quizzes and earn free tickets
               </p>
@@ -50,7 +50,7 @@ export const SideBar = () => {
             </li>
             <li className="flex gap-4 items-center  px-10 py-2 ">
               <img src={log} alt="" className="w-8" />
-              <p>Log Out</p>
+              <p  >Log Out</p>
             </li>
           </ul>
         </div>
