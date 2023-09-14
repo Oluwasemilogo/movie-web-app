@@ -117,7 +117,7 @@ export const Featured = () => {
                   data-testid="movie-release-date"
                   className="text-gray-500 text-sm mt-2"
                 >
-                  Release Date: {movie.release_date}
+           {movie.release_date}
                 </p>
                 
                   <div className="flex items-center gap-2 mt-2 ">
