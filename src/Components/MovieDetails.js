@@ -91,7 +91,7 @@ const MovieDetails = () => {
                   data-testid="movie-runtime"
                   className="text-lg text-[#404040] font-medium"
                 >
-                  {movieDetails.runtime} minutes
+                  {movieDetails.runtime} 
                 </p>
                 <div className="flex">
                   <ul className="flex gap-3 items-center">
