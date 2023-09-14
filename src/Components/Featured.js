@@ -4,7 +4,6 @@ import imob from "../Assets/imob.svg";
 import { Link } from "react-router-dom";
 import likeIcon from "../Assets/likeIcon.svg";
 
-
 export const Featured = () => {
   const [topMovies, setTopMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -78,56 +77,55 @@ export const Featured = () => {
           {error}
         </p>
       ) : (
-        <div className="grid grid-cols-1 mx-auto sm:grid-cols-2  md:grid-cols-4 gap-4 my-4">
+        <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 gap-4 my-4">
           {topMovies.map((movie) => (
-            <Link to={`/movies/${movie.id}`} key={movie.id}>
-              <div
-                data-testid="movie-card"
-                className="bg-white rounded-lg shadow-sm flex flex-col items-center my-8 pb-4 w-[270px] md:w-[300px] mx-auto ml-10"
-              >
-                <div className="relative">
-                  <img
-                    data-testid="movie-poster"
-                    src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                    alt={movie.poster}
-                    className=" w-[270px] md:w-[300px] h-[370px]"
-                  />
-                  <div className="absolute top-2 right-2">
-                    <button
-                      onClick={() => toggleLiked(movie.id)}
-                      className={`${
-                        likedMovies.includes(movie.id) ? "text-red-600" : ""
-                      }`}
-                    >
-                      {likedMovies.includes(movie.id) ? (
-                        redFillSVG
-                      ) : (
-                        <img src={likeIcon} alt="Like" />
-                      )}
-                    </button>
-                  </div>
+            <div
+              data-testid="movie-card"
+              className="bg-white rounded-lg shadow-sm flex flex-col items-center my-8 pb-4 w-[270px] md:w-[300px] mx-auto ml-10"
+              key={movie.id}
+            >
+              <div className="relative">
+                <img
+                  data-testid="movie-poster"
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                  alt={movie.poster}
+                  className="w-[270px] md:w-[300px] h-[370px]"
+                />
+                <div className="absolute top-2 right-2">
+                  <button
+                    onClick={() => toggleLiked(movie.id)}
+                    className={`${
+                      likedMovies.includes(movie.id) ? "text-red-600" : ""
+                    }`}
+                  >
+                    {likedMovies.includes(movie.id) ? (
+                      redFillSVG
+                    ) : (
+                      <img src={likeIcon} alt="Like" />
+                    )}
+                  </button>
                 </div>
+              </div>
+              <Link to={`/movies/${movie.id}`}>
                 <h2
                   data-testid="movie-title"
                   className="text-lg font-medium mt-1"
                 >
                   {movie.title}
                 </h2>
-                <p
-                  data-testid="movie-release-date"
-                  className="text-gray-500 text-sm mt-2"
-                >
-           {movie.release_date}
-                </p>
-                
-                  <div className="flex items-center gap-2 mt-2 ">
-                    <img src={imob} alt="imob icon" />
-                    <p>{movie.vote_average}/10</p>
-                  </div>
-                  
               
-              </div>
-            </Link>
+              <p
+                data-testid="movie-release-date"
+                className="text-gray-500 text-sm mt-2"
+              >
+                {movie.release_date}
+              </p>
+              <div className="flex items-center gap-2 mt-2 ">
+                <img src={imob} alt="imob icon" />
+                <p>{movie.vote_average}/10</p>
+                </div
+                ></Link>
+            </div>
           ))}
         </div>
       )}

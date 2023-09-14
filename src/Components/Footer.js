@@ -13,7 +13,7 @@ export const Footer = () => {
         <img src={twitter} alt="twitter" />
         <img src={youtube} alt="youtube" />
       </div>
-      <div className="flex flex-col md:flex items-center gap-6 mt-4">
+      <div className="text-center sm:flex sm:items-center gap-6 mt-4">
         <p className="text-gray-900 font-medium text-md">Conditions of use</p>
         <p className="text-gray-900 font-medium text-md">Privacy & Policy</p>
         <p className="text-gray-900 font-medium text-md">Press Room</p>
